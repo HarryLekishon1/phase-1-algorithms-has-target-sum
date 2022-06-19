@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const aarayNum = {};
+
+  for(const element of array){
+    const diff = target - element;
+    if(diff in aarayNum) return true;
+    aarayNum[element] = true;
+  }
+return false;
+
+
 }
 
 /* 
